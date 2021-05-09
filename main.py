@@ -39,7 +39,7 @@ else:
           f"\nСегодня будет {day_description}, днем ощущается как {day_feels_like}°С. {other_stuff}"
 
 account_sid = 'ACd077504190b48a7d4e8c88564b4ec9ff'
-auth_token = 'c893988ddca47d2a365dd3342a41708c'
+auth_token = os.environ.get('TOKEN')
 tw_phone = os.environ.get('TWILIO_PHONE')
 m_phone = os.environ.get('MY_PHONE')
 client = Client(account_sid, auth_token)
